@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>Special Offers | Smart Home Service</title>
+
+  <link rel="preconnect"
+  href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#f4f7fb;
+      color:#222;
+    }
+
+    /* HEADER */
+
+    header{
+
+      background:linear-gradient(135deg,#f2f0ed,#53e0e0);
+
+      padding:18px 8%;
+
+      display:flex;
+
+      align-items:center;
+
+      justify-content:space-between;
+
+      position:sticky;
+
+      top:0;
+
+      z-index:1000;
+
+    }
+
+    .logo-area img{
+
+      height:70px;
+
+      width:auto;
+
+      object-fit:contain;
+
+    }
+
+    nav a{
+
+      color:white;
+
+      text-decoration:none;
+
+      margin-left:25px;
+
+      font-weight:500;
+
+      transition:0.3s;
+
+    }
+
+    nav a:hover{
+      color:#ffeb3b;
+    }
+
+    /* HERO */
+
+    .hero{
+
+      position:relative;
+
+      height:80vh;
+
+      background:
+      linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.55)
+      ),
+
+      url('https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1400&q=80');
+
+      background-size:cover;
+
+      background-position:center;
+
+      display:flex;
+
+      align-items:center;
+
+      padding:0 8%;
+
+      color:white;
+
+    }
+
+    .hero-content{
+
+      max-width:700px;
+
+    }
+
+    .hero-content h1{
+
+      font-size:60px;
+
+      margin-bottom:20px;
+
+      line-height:1.2;
+
+    }
+
+    .hero-content p{
+
+      font-size:22px;
+
+      margin-bottom:35px;
+
+    }
+
+    .btn{
+
+      display:inline-block;
+
+      background:#ff9800;
+
+      color:white;
+
+      text-decoration:none;
+
+      padding:14px 32px;
+
+      border-radius:8px;
+
+      font-size:18px;
+
+      font-weight:600;
+
+      transition:0.3s;
+
+    }
+
+    .btn:hover{
+
+      background:#f57c00;
+
+      transform:translateY(-3px);
+
+    }
+
+    /* OFFERS SECTION */
+
+    .offers{
+
+      padding:90px 8%;
+
+      background:
+      linear-gradient(
+      rgba(255,255,255,0.92),
+      rgba(255,255,255,0.92)
+      ),
+
+      url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80');
+
+      background-size:cover;
+
+      background-position:center;
+
+      background-attachment:fixed;
+
+    }
+
+    .section-title{
+
+      text-align:center;
+
+      margin-bottom:60px;
+
+    }
+
+    .section-title h2{
+
+      font-size:44px;
+
+      color:#0d47a1;
+
+      margin-bottom:10px;
+
+    }
+
+    .section-title p{
+      color:#555;
+    }
+
+    .offer-grid{
+
+      display:grid;
+
+      grid-template-columns:
+      repeat(auto-fit,minmax(300px,1fr));
+
+      gap:30px;
+
+    }
+
+    .offer-card{
+
+      background:white;
+
+      border-radius:18px;
+
+      overflow:hidden;
+
+      box-shadow:0 5px 18px rgba(0,0,0,0.1);
+
+      transition:0.3s;
+
+    }
+
+    .offer-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .offer-card img{
+
+      width:100%;
+
+      height:230px;
+
+      object-fit:cover;
+
+    }
+
+    .offer-content{
+      padding:28px;
+    }
+
+    .offer-content h3{
+
+      color:#1565c0;
+
+      margin-bottom:15px;
+
+    }
+
+    .offer-content p{
+
+      color:#555;
+
+      line-height:1.7;
+
+      margin-bottom:20px;
+
+    }
+
+    .discount-tag{
+
+      display:inline-block;
+
+      background:#e53935;
+
+      color:white;
+      padding:8px 16px;
+
+      border-radius:30px;
+
+      margin-bottom:18px;
+
+      font-weight:600;
+
+    }
+
+    /* CONTACT SECTION */
+
+    .contact{
+
+      padding:90px 8%;
+
+      text-align:center;
+
+      background:#0d47a1;
+
+      color:white;
+
+    }
+
+    .contact h2{
+
+      font-size:42px;
+
+      margin-bottom:20px;
+
+    }
+
+    .contact p{
+
+      font-size:18px;
+
+      margin-bottom:25px;
+
+    }
+
+    footer{
+
+      background:#082b63;
+
+      color:white;
+
+      text-align:center;
+
+      padding:20px;
+
+    }
+
+    @media(max-width:768px){
+
+      .hero-content h1{
+        font-size:40px;
+      }
+
+      .hero-content p{
+        font-size:18px;
+      }
+
+      header{
+        flex-direction:column;
+      }
+
+      nav{
+        margin-top:15px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo-area">
+
+    <img src="C:\Users\Acer\OneDrive\Documents\css praticals\css praticals\FullLogo_NoBuffer-removebg-preview.png">
+
+  </div>
+
+  <nav>
+
+    <a href="index.html">Home</a>
+
+    <a href="offers.html">Offers</a>
+
+    <a href="Job opportunity.html">Jobs</a>
+
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <h1>Special Service Offers</h1>
+
+    <p>
+      Save money with our latest electrical and plumbing discounts.
+    </p>
+
+    </a>
+
+  </div>
+
+</section>
+
+<section class="offers">
+
+  <div class="section-title">
+
+    <h2>Current Offers</h2>
+
+    <p>
+      Limited-time discounts available now
+    </p>
+
+  </div>
+
+  <div class="offer-grid">
+
+    <!-- OFFER 1 -->
+
+    <div class="offer-card">
+
+      <img src="https://img.freepik.com/premium-vector/discount-label-with-20-percent-off_471039-131.jpg">
+
+      <div class="offer-content">
+
+        <div class="discount-tag">
+          20% OFF
+        </div>
+
+        <h3>House Wiring Service</h3>
+
+        <p>
+          Complete house wiring with safe installation
+          and quality electrical support.
+        </p>
+
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- OFFER 2 -->
+
+    <div class="offer-card">
+
+      <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80">
+
+      <div class="offer-content">
+
+        <div class="discount-tag">
+          FREE CHECK
+        </div>
+
+        <h3>Electrical Inspection</h3>
+
+        <p>
+          Free basic electrical checking for selected
+          home service bookings.
+        </p>
+
+
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- OFFER 3 -->
+
+    <div class="offer-card">
+
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80">
+
+      <div class="offer-content">
+
+        <div class="discount-tag">
+          SAVE MORE
+        </div>
+
+        <h3>Combo Home Service</h3>
+
+        <p>
+          Book electrical and plumbing services together
+          for additional discounts.
+        </p>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="contact">
+
+  <h2>Need Service?</h2>
+
+  <p>
+    Contact us today for fast support and latest offers.
+  </p>
+
+  <a href="https://wa.me/919999999999"
+  class="btn">
+
+    WhatsApp Now
+
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+    © 2026 Smart Home Service Center
+  </p>
+
+</footer>
+
+</body>
+</html>

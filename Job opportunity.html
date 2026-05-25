@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Job Application | Smart Home Service</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+
+      background:
+      linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.55)
+      ),
+
+      url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80');
+
+      background-size:cover;
+
+      background-position:center;
+
+      min-height:100vh;
+
+      display:flex;
+
+      justify-content:center;
+
+      align-items:center;
+
+      padding:40px 20px;
+
+    }
+
+    .form-container{
+
+      width:100%;
+
+      max-width:700px;
+
+      background:rgba(255,255,255,0.95);
+
+      padding:45px;
+
+      border-radius:20px;
+
+      box-shadow:0 8px 25px rgba(0,0,0,0.2);
+
+      backdrop-filter:blur(5px);
+
+    }
+
+    .form-title{
+
+      text-align:center;
+
+      margin-bottom:35px;
+
+    }
+
+    .form-title h1{
+
+      color:#0d47a1;
+
+      font-size:42px;
+
+      margin-bottom:10px;
+
+    }
+
+    .form-title p{
+
+      color:#666;
+
+      font-size:17px;
+
+    }
+
+    .input-group{
+
+      margin-bottom:22px;
+
+    }
+
+    .input-group label{
+
+      display:block;
+
+      margin-bottom:8px;
+
+      font-weight:600;
+
+      color:#333;
+
+    }
+
+    .input-group input,
+    .input-group textarea,
+    .input-group select{
+
+      width:100%;
+
+      padding:14px;
+
+      border:1px solid #ccc;
+
+      border-radius:10px;
+
+      font-size:16px;
+
+      outline:none;
+
+      transition:0.3s;
+
+    }
+
+    .input-group input:focus,
+    .input-group textarea:focus,
+    .input-group select:focus{
+
+      border-color:#1976d2;
+
+      box-shadow:0 0 8px rgba(25,118,210,0.3);
+
+    }
+
+    textarea{
+      resize:none;
+    }
+
+    .submit-btn{
+
+      width:100%;
+
+      border:none;
+
+      background:#ff9800;
+
+      color:white;
+
+      padding:16px;
+
+      border-radius:10px;
+
+      font-size:18px;
+
+      font-weight:600;
+
+      cursor:pointer;
+
+      transition:0.3s;
+
+    }
+
+    .submit-btn:hover{
+
+      background:#f57c00;
+
+      transform:translateY(-2px);
+
+    }
+
+    .note{
+
+      text-align:center;
+
+      margin-top:25px;
+
+      color:#666;
+
+      font-size:15px;
+
+    }
+
+    @media(max-width:768px){
+
+      .form-container{
+
+        padding:30px 20px;
+
+      }
+
+      .form-title h1{
+
+        font-size:32px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="form-container">
+
+    <div class="form-title">
+
+      <h1>Job Application Form</h1>
+
+      <p>
+        Fill out the form below to apply for job opportunities.
+      </p>
+
+    </div>
+
+    <form id="jobForm">
+
+  <!-- NAME -->
+
+  <div class="input-group">
+
+    <label>Full Name</label>
+
+    <input
+    type="text"
+    id="name"
+    placeholder="Enter your full name"
+    required>
+
+  </div>
+
+  <!-- DATE OF BIRTH -->
+
+  <div class="input-group">
+
+    <label>Date of Birth</label>
+
+    <input
+    type="text"
+    id="dob"
+    placeholder="DD / MM / YYYY"
+    required>
+
+  </div>
+
+  <!-- PHONE NUMBER -->
+
+  <div class="input-group">
+
+    <label>Phone Number</label>
+
+    <input
+    type="tel"
+    id="phone"
+    placeholder="Enter your phone number"
+    required>
+
+  </div>
+
+  <!-- ADDRESS -->
+
+  <div class="input-group">
+
+    <label>Address</label>
+
+    <textarea
+    id="address"
+    rows="4"
+    placeholder="Enter your address"
+    required></textarea>
+
+  </div>
+
+  <!-- JOB POSITION -->
+
+  <div class="input-group">
+
+    <label>Job Position</label>
+
+    <select id="position" required>
+
+      <option value="">
+        Select Position
+      </option>
+
+      <option>
+        Electrical Helper
+      </option>
+
+      <option>
+        Apprentice
+      </option>
+
+      <option>
+        Plumbing Helper
+      </option>
+
+      <option>
+        General Assistant
+      </option>
+
+    </select>
+
+  </div>
+
+  <!-- ABOUT YOURSELF -->
+
+  <div class="input-group">
+
+    <label>Describe About Yourself</label>
+
+    <textarea
+    id="about"
+    rows="5"
+    placeholder="Tell us about yourself"
+    required></textarea>
+
+  </div>
+
+  <!-- SUBMIT BUTTON -->
+
+  <button
+  type="submit"
+  class="submit-btn">
+
+    Submit Application
+
+  </button>
+
+</form>
+
+    <div class="note">
+
+      We will contact selected applicants shortly.
+
+    </div>
+
+  </div>
+
+<script>
+
+document.getElementById("jobForm")
+.addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  let name =
+  document.getElementById("name").value;
+
+  let dob =
+  document.getElementById("dob").value;
+
+  let phone =
+  document.getElementById("phone").value;
+
+  let address =
+  document.getElementById("address").value;
+
+  let position =
+  document.getElementById("position").value;
+
+  let about =
+  document.getElementById("about").value;
+
+  let message =
+`Job Application
+
+Name: ${name}
+
+DOB: ${dob}
+
+Phone: ${phone}
+
+Address: ${address}
+
+Position: ${position}
+
+About:
+${about}`;
+
+  let whatsappURL =
+`https://wa.me/919787809276?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, "_blank");
+
+});
+
+</script>
+
+</body>
+
+</html>
